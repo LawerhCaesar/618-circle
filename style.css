@@ -751,6 +751,57 @@ a {
 /* ═══════════════════════════════════════════════════════════
    IDENTITY SECTION
    ═══════════════════════════════════════════════════════════ */
+.editorial {
+  margin: 64px 0 0;
+}
+
+.editorial img {
+  display: block;
+  width: 100%;
+  height: clamp(280px, 42vw, 520px);
+  object-fit: cover;
+  object-position: center 42%;
+  border: 1px solid var(--black-border);
+  filter: saturate(0.72) contrast(1.05);
+}
+
+.editorial--proportion img {
+  height: clamp(320px, 46vw, 580px);
+  object-position: center 62%;
+}
+
+.editorial figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.editorial figcaption span {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.05rem;
+  color: var(--ivory);
+}
+
+.editorial figcaption small,
+.editorial figcaption a {
+  font-family: var(--font-accent);
+  font-size: 0.62rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grey-dark);
+  text-decoration: none;
+}
+
+.editorial figcaption a:hover {
+  color: var(--gold);
+}
+
 .identity__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1377,6 +1428,12 @@ a {
   .philosophy__grid {
     grid-template-columns: 1fr;
     gap: 48px;
+  }
+
+  .editorial figcaption {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
   }
   
   .difference__cards {
